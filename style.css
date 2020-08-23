@@ -77,6 +77,18 @@ div.gallery img {
 	border:0!important;
 }
 
+/** Trimming Breadcrumb Title Lengths With CSS **/ 
+.breadcrumbs span.current-item {
+    display: inline-block;
+    padding: 0;
+    margin-top: -3px;
+    vertical-align: middle;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /**
    ____ ____      ___     _____ _______   __  _____ ___  ____  __  __ ____  
   / ___|  _ \    / \ \   / /_ _|_   _\ \ / / |  ___/ _ \|  _ \|  \/  / ___| 
