@@ -1,8 +1,7 @@
 <?php
-function my_function_admin_bar(){
-	return false;
-}
-add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+// Hide admin bar on frontend for everyone
+show_admin_bar( false );
+
 add_action( 'after_setup_theme', 'cheamtheme_setup' );
 function cheamtheme_setup() {
 	load_theme_textdomain( 'cheamtheme', get_template_directory() . '/languages' );
@@ -301,9 +300,9 @@ add_action('bcn_after_fill', 'home_bc_pop');
 function home_bc_pop($trail)
 {
 if(is_home())
-{
-array_pop($trail->breadcrumbs);
-}
+	{
+		array_pop($trail->breadcrumbs);
+	}
 }
 
 //======================================================================
