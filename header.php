@@ -27,20 +27,15 @@
 <body <?php body_class(); ?>>
 	<div class="container">
 		<div class="row d-flex">
-		
 			<div class="col-12 pt-2">
-				
 				<img class="float-right" src="<?php echo get_template_directory_uri(); ?>/images/site-logos/logo-50px-no-txt.png" alt="OPH Logo">
 			<?php get_template_part('inc/username-50px-avatar'); ?>
 			</div>
 		</div>
 	<div class="row mb-2 bg-dark">
-	
 		<nav class="nav">
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-			
 		</nav>
-		
 	</div>
 	<div class="breadcrumbs mb-2" typeof="BreadcrumbList" vocab="https://schema.org/">
 		<?php
