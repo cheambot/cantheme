@@ -1,0 +1,251 @@
+/*
+Theme Name: CheamTheme
+Theme URI: https://github.com/chsintranet/cheamtheme/
+Author: bortus
+Author URI: 
+Description: Custom WordPress theme for the CHS intranet.
+Version: 1.5
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: bootstrapv4, fontawesome, awesomesupport, lightweight, scoobysnacks, jquery
+Text Domain: cheamtheme
+
+CheamTheme WordPress Theme
+CheamTheme is distributed under the terms of the GNU GPL
+*/
+
+/* SITE-WIDE CSS */
+html,
+body {
+	height: 100%;
+}
+
+body {
+}
+
+.maxwide {
+	max-width: 1400px;
+}
+
+hr.small { 
+	margin: 5px 0px;
+}
+
+/* Smaller small than Bootstrap */
+small {
+	font-size: 80%;
+}
+
+/* TEXT CSS */
+h6, .h6 {
+	font-size:0.9rem;
+}
+
+.display-5 {
+	font-size:2rem;
+	font-weight:400;
+	line-height:1.2;
+}
+
+.display-6 {
+	font-size:1.5rem;
+	font-weight:300;
+	line-height:1.2;
+}
+
+/* See if these are needed or not
+.map {
+	width: 100%;
+	height: 100%;
+	min-height: 600px;
+}
+
+.fill {
+	min-height: 600px;
+	height: 100%;
+} */
+
+
+
+/* GRAVITY FORMS CSS */
+.gfield_label { margin-bottom:0px!important; }
+.ginput_container { margin-top:0px!important; }
+.gfield_description { padding-top:2px!important; }
+.gsection { background-color:#00838F!important; }
+h2.gsection_title { padding-left:10px!important; color:#ffffff; }
+li.agree-tick { font-size:1.2em;}
+.large-radio-text { font-size:1.1em;}
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label {
+	font-size:1em;
+}
+
+.gform_wrapper table.gfield_list thead th,
+.gform_wrapper table.gfield_list td, .gform_wrapper table.gfield_list th {
+	font-weight:400;
+	padding-bottom:0px;
+	padding-top:0px;
+}
+
+.upw-posts article { padding:1px!important;}
+
+#gallery-2 img { border: 0!important; }
+
+
+
+
+
+.wpas-replies-middle-toolbar-item img {
+	border-width:2px!important;
+}
+
+
+.upw-posts article { border:0px!important;}
+
+
+
+
+
+
+
+
+
+a.site-icon img {
+}
+
+a.site-icon img:hover {
+	filter: brightness(90%);
+}
+
+
+
+
+
+
+
+.booking-button {border:0px solid #909090;}
+
+
+.border-1 { border:1px solid #747474;}
+.upw-posts article { margin-bottom:0px!important;}
+
+.textwidget p { margin-bottom:0px; }
+
+ul.ex-attachments-smallicons, ul.sidebar_login_links { margin-bottom:0px!important; }
+
+.breadcrumb { background-color:#ffffff; margin-bottom:0px!important; }
+
+
+.wpas-ticket-details h3 { font-size:1.5rem;}
+
+img.avatar { 
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+}
+
+.profile-pic {
+	position: relative;
+	display: inline-block;
+}
+
+.profile-pic:hover .ppic-edit {
+	display: block;
+}
+
+.ppic-edit {
+	padding-top: 0px;	
+	padding-right: 0px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	width:100%;
+	text-align:center;
+}
+
+.ppic-edit a {
+	background-color:#ffffff;
+	width:100%;
+	opacity:0.8;
+	color: #000000;
+	font-weight:bold;
+	display:inline-block;
+	border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+} 
+
+button#wpua-undo-existing {display:none;}
+span#wpua-edit-attachment-existing {display:none;}
+div.wpua-edit-container > h3:first-child {display:none;}
+
+
+form#loginform > div.form-group {
+	margin-bottom:0.5rem;
+}
+
+
+form#loginform > div.form-group > label {
+	margin-bottom:0rem;
+}
+
+input#rememberme {display:none;}
+
+
+
+ul.sub-menu {
+	-webkit-box-shadow: 0px 4px 29px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 4px 29px 0px rgba(0,0,0,0.5);
+box-shadow: 0px 4px 29px 0px rgba(0,0,0,0.5);
+}
+
+
+
+#hideMe {
+    -moz-animation: cssAnimation 0s ease-in 30s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 30s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 30s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 30s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+/* Set the font size for the 'Latest News' post title on the front page widget */
+div.latest-news > div > article > header > span.entry-title {
+	font-size:1.1rem;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}

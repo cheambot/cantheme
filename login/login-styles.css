@@ -1,0 +1,87 @@
+/**************************/
+/**     LOGIN BODY       **/
+/**************************/
+
+/** body.login {
+	background-image: url('login-page-bg-15pc.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top left;
+	background-size:100%;
+}
+**/
+.login h1 { margin-bottom:-50px; }
+#login h1 a, .login h1 a {
+	background:none;
+	height:0px;
+}
+.login h1::after { content: url('logo-150px.png'); }
+#login { padding-top:40px;}
+
+.login .success, .login #login_error {
+	margin-top:30px;
+}
+/**************************/
+/**     LOGIN FORM       **/
+/**************************/
+
+/**
+.login form {
+	border-radius:10px;
+	-webkit-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.45);
+	-moz-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.45);
+	box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.45);
+}
+**/
+
+.login form .forgetmenot {
+	display:none;
+	width:1px;
+}
+
+.login form p:first-of-type { height:0px; }
+.login-title-1 { font-weight:700!important; color:#00885e; }
+.login-title-2 { font-weight:700!important; color:#b48c54 }
+.login label {
+  font-size: 16px;
+  color: #555;
+}
+input#wp-submit {
+	width:100%;
+	margin-top:20px;
+	background:#007bff;
+	border:0px;
+	box-shadow:none;
+	text-shadow:none;
+	font-size:16px;
+	height:50px;
+}
+.login #backtoblog { display:none; }
+
+/**************************/
+/**        FOOTER        **/
+/**************************/
+.login-footer-wrapper {
+	position:relative;
+	bottom:0px;
+	width:100%;
+}
+.login-footer {
+	width:80%;
+	background:#fff;
+	opacity:0.7;
+	padding:10px;
+	border-radius:20px;
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.cookie-header {
+	margin-right:10px;
+	float:left;
+	font-weight:600;
+}
+
+.cookie-text {
+	margin-left:120px;
+}

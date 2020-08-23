@@ -1,0 +1,60 @@
+<div class="clearfix">
+    <?php
+        $user = wp_get_current_user();
+        $user_id = $user->ID;
+        // Get the url of the avatar 50px in size
+        $avatar = get_avatar( $user_id, 50 );
+        // Get user first and last name
+        // URL of the page to change their avatar
+        $edit_pic_url = site_url( '/change-your-staff-photo/' );
+        // URL of the admin dashboard
+        $dash_url = get_dashboard_url();
+        // URL to log user out
+        $logout_url = wp_logout_url( home_url() );
+        // Obtain the personalTitle mapped attribute from the LDAP plugin
+        // get_user_meta returns an array of data so we need to select the single item
+        // from the array we need which is specified using the value of $key
+        // $single = true: If true return value of meta data field
+        // See https://developer.wordpress.org/reference/functions/get_user_meta/
+        $key = 'ad_displayname';
+        $single = true;
+        $displayName = get_user_meta( $user_id, $key, $single ); ?>
+        
+        <div class="userbox">
+			<div class="profile-pic float-left">
+				<?php echo $avatar; ?>
+			</div>
+		</div>
+		<div class="float-left pt-1 pl-2">
+			<span class="h4"><?php echo $displayName; ?></span>
+			<br><span class="text-uppercase small m-0 p-0">
+			<?php //IF the user can create posts ie is IT support or posts on the frontpage then post a link to the dashboard
+			if ( current_user_can( 'create_posts' ) || current_user_can( 'gravityforms_view_entries' ) ) {
+				echo '<a href="' . $dash_url . '">Dashboard</a>&nbsp;-&nbsp;<a href="' . $logout_url . '">Logout</a>';
+			} else {
+				echo '<a href="' . get_page_link(33) . '">Change My Picture</a>&nbsp;-&nbsp;<a href="' . $logout_url . '">Logout</a>';
+			} ?>
+			</span>
+		</div>
+		
+		<a class="btn btn-primary" href="#" role="button">Link</a>
+</div>
+
+<?php
+// We use this template file so we can reuse it rather than replicating the code on every page
+get_template_part('login-form');
+
+	// dynamic_sidebar( 'helpdesk-buttons-widget-area' );
+	// dynamic_sidebar( 'weekly-notices-widget-area' );
+    // dynamic_sidebar( 'remote-learning-widget-area' );
+    // dynamic_sidebar( 'useful-docs-widget-area' );
+	// dynamic_sidebar( 'medical-widget-area' );
+	// dynamic_sidebar( 'data-collection-widget-area' );
+	// dynamic_sidebar( 'magt-widget-area' );
+	// dynamic_sidebar( 'social-events-widget-area' );
+	
+	// dynamic_sidebar( 'lost-n-found-widget-area' );
+	dynamic_sidebar( 'search-widget-area' );
+?>
+
+<a href="' . get_page_link(33) . '">Change My Picture</a>&nbsp;-&nbsp;

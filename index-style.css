@@ -1,0 +1,48 @@
+.wpas-ticket-list {
+	margin-top:6px;
+}
+
+div.ticketlist_tr:first-child th {
+   display: none;
+}
+div.ticketlist_td:nth-child(1) {
+   float:left;
+	text-align:left;
+}
+div.ticketlist_td:nth-child(2) {
+   padding-left:4px;
+}
+
+div.ticketlist_th:nth-child(3) {
+   display: none;
+}
+
+div.ticketlist_td:nth-child(3) {
+   display: none;
+}
+
+div.ticketlist_th:nth-child(4) {
+   display: none;
+}
+
+div.ticketlist_td:nth-child(4) {
+   display: none;
+}
+
+.wpas-label-status {
+	display:inline-block;
+	text-align:center;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    vertical-align: baseline;
+    border-radius: .25em;
+	}
+
+.user-block { border:1px solid #ccc;
+border-radius:10px;padding:4px;padding-right:10px;min-width:100%;}
+.media-body {
+	line-height:1;min-height:100%;
+}

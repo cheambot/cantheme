@@ -1,0 +1,53 @@
+<div class="mb-4">
+    <?php
+    if ( is_user_logged_in() ) {
+        $user = wp_get_current_user();
+        $user_id = $user->ID;
+        // Get the url of the avatar 50px in size
+        $avatar = get_avatar( $user_id, 50 );
+        // Get user first and last name
+        $fname = $user->user_firstname;
+        $lname = $user->user_lastname;
+        // URL of the page to change their avatar
+        $edit_pic_url = site_url( '/change-your-profile-pic/' );
+        // URL of the admin dashboard
+        $dash_url = get_dashboard_url();
+        // URL to log user out
+        $logout_url = wp_logout_url( home_url() );
+        // Obtain the personalTitle mapped attribute from the LDAP plugin
+        // get_user_meta returns an array of data so we need to select the single item
+        // from the array we need which is specified using the value of $key
+        // $single = true: If true return value of meta data field
+        // See https://developer.wordpress.org/reference/functions/get_user_meta/
+        $key = 'mo_ldap_local_custom_attribute_title';
+        $single = true;
+        $title = get_user_meta( $user_id, $key, $single );
+        // Build the user-box section
+        echo '<div class="userbox"><div class="profile-pic float-left">' . $avatar . '<div class="ppic-edit"><a href="' . $edit_pic_url . '"><i class="fas fa-pencil-alt"></i><br>EDIT</a></div></div><div class="float-left protext pt-1 pl-2"><span class="h4 protext">' . $title . '&nbsp;' . $lname . '</span><br><span class="text-uppercase small m-0 p-0">';
+        // IF the user can create posts ie is IT support or posts on the frontpage then post
+        // a link to the dashboard
+        if ( current_user_can( 'create_posts' ) || current_user_can( 'gravityforms_view_entries' ) ) {
+            echo '<a href="' . $dash_url . '">Dashboard</a>&nbsp;-&nbsp;<a href="' . $edit_pic_url . '">Edit Picture</a>&nbsp;-&nbsp;<a href="' . $logout_url . '">Logout</a></span></div></div><div class="clearfix"></div>';
+        } else {
+            echo '<a href="' . $edit_pic_url . '">Change My Picture</a>&nbsp;-&nbsp;<a href="' . $logout_url . '">Logout</a></span></div></div><div class="clearfix"></div>';
+        }
+    } // close if user is logged in
+    else {
+        ?>
+    <span class="h5"><i class="fas fa-sign-in-alt"></i>&nbsp;Log In To The Intranet</span>
+    <hr class="small">
+    <form name="loginform" id="loginform" action="http://intranet/wp-login.php" method="post">
+        <div class="form-group">
+            <label for="user_login"><i class="fas fa-user"></i>&nbsp;Username</label>
+            <input type="username" name="log" class="form-control form-control-sm" id="user_login" aria-describedby="username_tip" placeholder="Enter your network username">
+            <!-- <small id="username_tip" class="form-text text-muted">Use your username blah</small> -->
+        </div>
+        <div class="form-group">
+            <label for="user_pass"><i class="fas fa-lock"></i>&nbsp;Password</label>
+            <input type="password" name="pwd" class="form-control form-control-sm" id="user_pass" placeholder="Password">
+        </div>
+        <input name="rememberme" type="checkbox" id="rememberme" value="forever" checked="checked">
+        <input type="submit" name="wp-submit" id="wp-submit" class="btn btn-primary" value="Log In">
+    </form>
+    <?php } // close else ?>
+</div>
