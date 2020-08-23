@@ -21,18 +21,16 @@ function my_myme_types($mime_types){
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
 
 // enqueue my keyword monitoring javascript
-
 function cheamtheme_enqueue_scripts() {
 	wp_enqueue_script('keyword-monitor', get_template_directory_uri() . '/js/keywords.js', array(), '1.7' );
 }
 add_action( 'wp_enqueue_scripts', 'cheamtheme_enqueue_scripts' );
 
-// Page password expires after 10 seconds
-function wpse_191369_post_password_expires() {
+// overrides the default cookie timeout for all post passwords to 10 secs
+function tensec_post_password_expires() {
     return time() + 5; // Expire in 10 seconds
 }
-
-add_filter( 'post_password_expires', 'wpse_191369_post_password_expires' );
+add_filter( 'post_password_expires', 'tensec_post_password_expires' );
 
 //======================================================================
 // Add custom styles to the WordPress editor
