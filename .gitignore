@@ -3,6 +3,9 @@
 *.bak
 *.txt
 
+### Old Versions ###
+*.old
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
