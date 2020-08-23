@@ -296,14 +296,15 @@ function register_text( $translated ) {
 	return $translated;
 }
 
-//===== chnage author base to staff
-// add_action('init','change_author_base_permalinks');
-// function change_author_base_permalinks()
-// {
-//    global $wp_rewrite;
-//    $wp_rewrite->author_base = 'staff'; // Change 'member' to be the base URL you wish to use
-//    $wp_rewrite->author_structure = '/' . $wp_rewrite->author_base. '/%author%';
-// }
+//===== Remove breadcrumbs on home page
+add_action('bcn_after_fill', 'home_bc_pop');
+function home_bc_pop($trail)
+{
+if(is_home())
+{
+array_pop($trail->breadcrumbs);
+}
+}
 
 //======================================================================
 // Removed the 'lost password' link from the login box as all passwords
