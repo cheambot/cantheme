@@ -12,22 +12,6 @@ function cheamtheme_setup() {
 	register_nav_menus( array( 'main-menu' => __( 'Main Menu', 'cheamtheme' ) ) );
 }
 
-add_action( 'login_footer', 'your_custom_footer' );
-
-function your_custom_footer() {
-
-// Add your content here
-?>
-<!-- <div class="login-footer-wrapper">
-	<div class="login-footer">
-		<span class="cookie-header">&#x1f36a;&nbsp;Cookie Notice</span>
-		<div class="cookie-text">
-			Cookies enable you to use the helpdesk, submit forms, personalise content, help us measure the effectiveness of searches and give us insights into user behavior so we can improve the site. By clicking on or navigating the site, you agree to allow us to collect information through cookies.
-		</div>
-	</div>
-</div> -->
-<?php }
-
 // allow file types upload
 function my_myme_types($mime_types){
     $mime_types['svg'] = 'image/svg+xml'; //Adding svg extension
