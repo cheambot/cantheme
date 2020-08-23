@@ -27,16 +27,9 @@
 		</div>
 		<div class="float-left pl-2" id="user-nfo">
 			<span class="h5"><?php echo $displayName; ?></span>
-			<br><span class="text-uppercase small">
-			<?php //IF the user can create posts ie is IT support or posts on the frontpage then post a link to the dashboard
-			if ( current_user_can( 'create_posts' ) || current_user_can( 'gravityforms_view_entries' ) ) {
-				echo '<a href="' . $dash_url . '">Dashboard</a>&nbsp;-&nbsp;<a href="' . $logout_url . '">Logout</a>';
-			} else {
-				echo '<a href="' . $logout_url . '">Logout</a>';
-			} ?>
+			<br>
+			<span class="small">
+				<a href="<?php echo $logout_url ?>">Logout</a>
 			</span>
 		</div>
-		
-		<a class="btn btn-success btn-sm" href="#" role="button">Submit Ticket</a>
-		<a class="btn btn-info btn-sm" href="#" role="button">Book Computer Room</a>
 </div>

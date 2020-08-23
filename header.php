@@ -31,7 +31,7 @@
 			<div class="col-12 pt-2">
 				
 				<img class="float-right" src="<?php echo get_template_directory_uri(); ?>/images/site-logos/logo-50px-no-txt.png" alt="OPH Logo">
-			<?php get_template_part('inc/useful-links'); ?>
+			<?php get_template_part('inc/username-50px-avatar'); ?>
 			</div>
 		</div>
 	<div class="row mb-2 bg-dark">
