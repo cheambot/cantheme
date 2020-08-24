@@ -20,9 +20,6 @@
 	<meta name="msapplication-TileColor" content="#05324e">
 	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#05324e">
-	<?php if ( is_front_page() ) { ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/index-style.css?v=3.0.0.0 ">
-	<?php } ?>
 </head>
 <body <?php body_class(); ?>>
 	<div class="container">
