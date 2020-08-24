@@ -32,6 +32,8 @@ div#user-nfo { line-height:1.0!important; }
 
 div.title-text-container { line-height: 1.15; }
 
+div.breadcrumbs-row { background-color:rgb(225,230,235); }
+
 hr.small { 
     margin: 5px 0px; 
 }
