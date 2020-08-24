@@ -21,11 +21,11 @@
         $displayName = get_user_meta( $user_id, $key, $single ); ?>
         
         <div class="userbox">
-			<div class="profile-pic float-left">
+			<div class="profile-pic float-right">
 				<?php echo $avatar; ?>
 			</div>
 		</div>
-		<div class="float-left pl-2" id="user-nfo">
+		<div class="float-right pr-2 text-right" id="user-nfo">
 			<span class="h5"><?php echo $displayName; ?></span>
 			<br>
 			<span class="small">
