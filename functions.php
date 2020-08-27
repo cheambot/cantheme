@@ -197,7 +197,7 @@ echo "<script>document.getElementById('rememberme').checked = true;</script>";
 add_filter(  'gettext',  'register_text'  );
 add_filter(  'ngettext',  'register_text'  );
 function register_text( $translated ) {
-     $translated = str_ireplace(  'Username or Email Address',  '<div class="text-center"><span class="h4 login-title-1">OAKS PARK</span><br><span class="h4 login-title-2">STAFF INTRANET</span><br><span class="small">GDPR compliance requires all staff to be logged in. Your username & password are the same ones used to log on to PCs around the school.</span></div>Username',  $translated );
+     $translated = str_ireplace(  'Username or Email Address',  '<div style="text-align:center;"><h3 id="login-title-1">' . get_bloginfo( 'name' ) . '</h3><span class="small">GDPR compliance requires all staff to be logged in. Your username & password are the same ones used to log on to PCs around the school.</span></div><label for"user_login">Username</label>',  $translated );
 	return $translated;
 }
 
