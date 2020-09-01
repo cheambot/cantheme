@@ -15,6 +15,7 @@
 	
 	<!-- Column 2 -->
 	<div class="col-lg-4 col-sm-6" id="home-col-2">
+		<?php dynamic_sidebar('expand-collapse-widget-area'); ?>
 		<?php dynamic_sidebar('col-2-widget-area'); ?>
 	</div>
 
