@@ -536,8 +536,8 @@ register_sidebar( array (
 	'id' => 'expand-collapse-widget-area',
 	'before_widget' => '<div class="mb-3">',
 	'after_widget' => '</div>',
-	'before_title' => '<span class="h5">',
-	'after_title' => '</span><hr class="small">',
+	'before_title' => '<p><a class="btn btn-primary" data-toggle="collapse" href="#collapseWeeklyNotices" role="button" aria-expanded="false" aria-controls="collapseWeeklyNotices">',
+	'after_title' => '</a></p>',
 ) );
 
 //======================================================================
