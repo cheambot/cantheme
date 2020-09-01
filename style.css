@@ -24,10 +24,10 @@ p { font-size:0.9rem; }
 
 div.profile-pic img.avatar { border-radius: 50%!important; }
 
-ul#menu-external-sites { font-size:0.94em!important; list-style-type: none; }
+ul#menu-external-sites { font-size:0.9em!important; list-style-type: none; }
 ul#menu-external-sites li { padding: 0.3em 0 0.3em 0!important; border-bottom:1px solid #dedede; }
 
-
+.news-headlines { line-height:1.15!important; }
 div#user-nfo { line-height:1.0!important; }
 
 div.title-text-container { line-height: 1.15; }
@@ -40,6 +40,8 @@ div.breadcrumbs-row { background-color:rgb(225,230,235); }
 .weekly-notices-btn .collapsed .fas {
   transform: rotate(-90deg);
 }
+
+ul#menu-external-sites { padding-left:0!important; }
 
 hr.small { 
     margin: 5px 0px; 
