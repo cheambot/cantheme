@@ -529,6 +529,18 @@ register_sidebar( array (
 ) );
 
 //======================================================================
+// Expanding/Collapse Widgets
+//======================================================================
+register_sidebar( array (
+	'name' => __( 'Expanding Widget', 'cheamtheme' ),
+	'id' => 'expand-collapse-widget-area',
+	'before_widget' => '<div class="mb-3">',
+	'after_widget' => '</div>',
+	'before_title' => '<span class="h5">',
+	'after_title' => '</span><hr class="small">',
+) );
+
+//======================================================================
 // id="home-col-1" Widgets
 //======================================================================
 register_sidebar( array (
