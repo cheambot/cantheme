@@ -39,3 +39,4 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+login/logo-150px.png
