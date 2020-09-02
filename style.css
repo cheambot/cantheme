@@ -21,7 +21,7 @@ html, body {
 body.error404 {margin-bottom:-200px;}
 
 p { font-size:0.9rem; }
-
+.nav-bg { background-color:rgb(45, 64, 89); }
 div.profile-pic img.avatar { border-radius: 50%!important; }
 
 ul#menu-external-sites { font-size:0.9em!important; list-style-type: none; }
