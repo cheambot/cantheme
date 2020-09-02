@@ -29,7 +29,7 @@
 			<?php get_template_part('inc/username-50px-avatar'); ?>
 			</div>
 		</div>
-	<div class="row bg-dark">
+	<div class="row nav-bg">
 		<nav class="nav">
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 		</nav>
