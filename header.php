@@ -34,8 +34,8 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 		</nav>
 	</div>
-	<div class="row breadcrumbs-row pt-2">
-		<div class="breadcrumbs mb-2" typeof="BreadcrumbList" vocab="https://schema.org/">
+	<div class="row breadcrumbs-row mb-2">
+		<div class="breadcrumbs px-3 py-2" typeof="BreadcrumbList" vocab="https://schema.org/">
 			<?php
 				if(function_exists('bcn_display'))
 					{
