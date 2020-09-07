@@ -557,7 +557,7 @@ register_sidebar( array (
 register_sidebar( array (
 	'name' => __( 'Column 2', 'cheamtheme' ),
 	'id' => 'col-2-widget-area',
-	'before_widget' => '<div class="my-3">',
+	'before_widget' => '<div class="mb-3">',
 	'after_widget' => '</div>',
 	'before_title' => '<span class="h5">',
 	'after_title' => '</span><hr class="small">',
