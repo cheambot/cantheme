@@ -8,13 +8,13 @@
 
 <div class="row">
 	<!-- Column 1 -->
-	<div class="col-lg-6 col-sm-6" id="home-col-1">
+	<div class="col-lg-7 col-sm-6" id="home-col-1">
 		<?php dynamic_sidebar('col-1-widget-area'); ?>
 		<?php get_template_part('left-sidebar'); ?>
 	</div>
 	
 	<!-- Column 2 -->
-	<div class="col-lg-4 col-sm-6" id="home-col-2">
+	<div class="col-lg-3 col-sm-6" id="home-col-2">
 		<?php dynamic_sidebar('expand-collapse-widget-area'); ?>
 		<?php dynamic_sidebar('col-2-widget-area'); ?>
 	</div>
