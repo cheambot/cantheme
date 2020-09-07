@@ -29,7 +29,7 @@
 			<span class="h5"><?php echo $displayName; ?></span>
 			<br>
 			<span class="small">
-				<a href="<?php echo $logout_url ?>">Logout</a>
+				<?php if ( current_user_can( 'edit_posts' ) ) { echo '<a href="' . $dash_url . '">Dashboard</a>&nbsp;-&nbsp;'; }; ?><a href="<?php echo $logout_url ?>">Logout</a>
 			</span>
 		</div>
 </div>
