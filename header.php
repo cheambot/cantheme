@@ -34,12 +34,14 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 		</nav>
 	</div>
-	<div class="row breadcrumbs-row mb-2">
-		<div class="breadcrumbs px-3 py-2" typeof="BreadcrumbList" vocab="https://schema.org/">
-			<?php
+	<?php
 				if(function_exists('bcn_display'))
 					{
+	echo '<div class="row breadcrumbs-row mb-2">';
+		echo '<div class="breadcrumbs px-3 py-2" typeof="BreadcrumbList" vocab="https://schema.org/">';
+			
 						bcn_display();
-					}?>
-		</div>
-	</div>
+					
+		echo '</div>';
+	echo '</div>';
+	}?>
