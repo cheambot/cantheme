@@ -9,7 +9,7 @@ Template Name: External CCTV
 <?php
 // TEXTLINKS - THIS CODE GENERATES THE TEXT LINKS TO EACH BLOCKS ANCHOR LINK				
 // Create recursive directory iterator which skips dot folders
-// $dir = new RecursiveDirectoryIterator( './wp-content/themes/cheamtheme/external-cctv/thumbs', FilesystemIterator::SKIP_DOTS );
+// $dir = new RecursiveDirectoryIterator( './wp-content/themes/cantheme/external-cctv/thumbs', FilesystemIterator::SKIP_DOTS );
 // Flatten the recursive iterator, folders come before their files
 // $it = new RecursiveIteratorIterator( $dir, RecursiveIteratorIterator::SELF_FIRST );
 // Maximum depth is 0 levels deeper than the base folder
@@ -40,13 +40,13 @@ Template Name: External CCTV
 		<span class="h3 display-5"><?php the_title(); ?></span>
 		<hr class="small mb-4">
 		<p>Please note that these are not the live camera feeds. They are just examples of each cameras viewpoint so you can tell Premises which camera(s) you want footage from.</p>
-		<h5>To submit your request for <strong>External CCTV</strong> footage, please use the <a href="http://intranet/premises-form/">Premises 'Report an Issue/Job' form</a>, from the Premises submenu. </h5>
+		<h5>To submit your request for <strong>External CCTV</strong> footage, please use the <a href="http://staffintranet/premises-form/">Premises 'Report an Issue/Job' form</a>, from the Premises submenu. </h5>
 		<!-- <p>Click on the block name to jump to that buildings cameras:</p>
 		<hr class="small mb-4"> -->
 <?php
 // TEXTLINKS - THIS CODE GENERATES THE TEXT LINKS TO EACH BLOCKS ANCHOR LINK				
 // Create recursive directory iterator which skips dot folders
-// $dir = new RecursiveDirectoryIterator( './wp-content/themes/cheamtheme/external-cctv/thumbs', FilesystemIterator::SKIP_DOTS );
+// $dir = new RecursiveDirectoryIterator( './wp-content/themes/cantheme/external-cctv/thumbs', FilesystemIterator::SKIP_DOTS );
 // Flatten the recursive iterator, folders come before their files
 // $it = new RecursiveIteratorIterator( $dir, RecursiveIteratorIterator::SELF_FIRST );
 // Maximum depth is 0 levels deeper than the base folder
@@ -67,7 +67,7 @@ Template Name: External CCTV
 <?php
 // THUMBNAILS - THIS CODE GENERATES THE THUMBNAILS FOR EACH BLOCK
 // Create recursive directory iterator which skips dot folders
-$dir = new RecursiveDirectoryIterator( './wp-content/themes/cheamtheme/external-cctv/thumbs', FilesystemIterator::SKIP_DOTS );
+$dir = new RecursiveDirectoryIterator( './wp-content/themes/cantheme/external-cctv/thumbs', FilesystemIterator::SKIP_DOTS );
 // Flatten the recursive iterator, folders come before their files
 $it = new RecursiveIteratorIterator( $dir, RecursiveIteratorIterator::SELF_FIRST );
 // Maximum depth is 1 level deeper than the base folder. The code will scan inside each
@@ -85,7 +85,7 @@ foreach ( $it as $fileinfo ) {
 		if (in_array(strtolower($filetype), $filetypes)) {
 			$file = basename( ( $fileinfo->getFilename() ), ".png" );
 			echo "<div class=\"col-md-2 col-sm-3 p-2 text-center\">\n";
-			echo "<a href=\"/wp-content/themes/cheamtheme/external-cctv/" . $dir . "/" . $file . ".png\"  data-toggle=\"lightbox\" data-title=\"".$file."\"  data-gallery=\"".$dir."\"><img class=\"img-fluid pb-1\" src=\"/wp-content/themes/cheamtheme/external-cctv/thumbs/" . $dir . "/" . $file . ".png\"><br>" . $file . "</a>\n";
+			echo "<a href=\"/wp-content/themes/cantheme/external-cctv/" . $dir . "/" . $file . ".png\"  data-toggle=\"lightbox\" data-title=\"".$file."\"  data-gallery=\"".$dir."\"><img class=\"img-fluid pb-1\" src=\"/wp-content/themes/cantheme/external-cctv/thumbs/" . $dir . "/" . $file . ".png\"><br>" . $file . "</a>\n";
 			echo "</div>\n";
 		}
 	}
