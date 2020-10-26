@@ -8,15 +8,15 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 	<div class="row mb-4"> 
 		<div class="staff-profile clearfix mb-3">
 			<div class="float-left pr-4">
-				<?php echo get_avatar( $curauth->user_email , '250'); ?>
+				<?php echo get_avatar( $curauth->user_email , '300'); ?>
 			</div>
 			<div class="float-left">
 				<h2><?php echo $curauth->ad_title; ?> <?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?>  (<?php echo $curauth->ad_staffcode; ?>)</h2>	
 				<p>
 					<strong>Phone: </strong><?php echo $curauth->ad_phone; ?><br>
-					<strong>Email: </strong><a href="mailto:<?php echo $curauth->user_email; ?>"><?php echo $curauth->user_email; ?></a><br><br>
+					<strong>Email: </strong><a href="mailto:<?php echo $curauth->user_email; ?>"><?php echo $curauth->user_email; ?></a><br>
 					<strong>Department: </strong><?php echo $curauth->ad_department; ?><br>
-					<strong>Position: </strong><?php echo $curauth->ad_job_title; ?><br>
+					<strong>Position: </strong><?php echo $curauth->ad_description; ?><br>
 					<strong>Location: </strong><?php echo $curauth->ad_location; ?><br>
 					<strong>House: </strong><?php echo $curauth->ad_house; ?>
 				</p>
