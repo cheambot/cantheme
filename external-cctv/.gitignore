@@ -1,4 +1,6 @@
 /External/*.jpg
 /thumbs/*.jpg
+/External/*.png
+/thumbs/*.png
 /thumbs/External/*.jpg
 /thumbs/External/*.png
