@@ -1,4 +1,16 @@
 <?php
+/**
+ * Filter Force Login to allow exceptions for specific URLs.
+ *
+ * @param array $whitelist An array of URLs. Must be absolute.
+ * @return array
+ */
+function my_forcelogin_whitelist( $whitelist ) {
+  $whitelist[] = home_url( '/wp-cron.php' );
+  return $whitelist;
+}
+add_filter( 'v_forcelogin_whitelist', 'my_forcelogin_whitelist' );
+
 // Hide admin bar on frontend for everyone
 show_admin_bar( false );
 
@@ -18,7 +30,13 @@ function my_myme_types($mime_types){
     $mime_types['pages'] = 'application/x-iwork-pages-sffpages'; //Adding pages
     return $mime_types;
 }
-add_filter('upload_mimes', 'my_myme_types', 1, 1);
+add_filter('upload_mimes', 'my_myme_types' );
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 
 // enqueue my keyword monitoring javascript
 function cheamtheme_enqueue_scripts() {
@@ -381,7 +399,12 @@ function html_custom_wp_trim_excerpt($html_excerpt) {
 			$excerptOutput .= $token;
 		}
 		$html_excerpt = trim(force_balance_tags($excerptOutput));
+		if ( is_category('isolating-students') ) {
+		$excerpt_end = '';
+		}
+		else {
 		$excerpt_end = '.. <br><a href="'. esc_url( get_permalink() ) . '"><strong><em>Click to view the full post</em></strong></a>'; 
+		}
 		$excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end); 
 		$pos = strrpos($html_excerpt, '</');
 		if ($pos !== false) {
@@ -528,6 +551,14 @@ register_sidebar( array (
 	'after_title' => '</span>',
 ) );
 
+register_sidebar( array (
+	'name' => __( 'Info Widget', 'cheamtheme' ),
+	'id' => 'info-widget-area',
+	'before_widget' => '<div class="alert alert-info" role="alert">',
+	'after_widget' => '</div>',
+	'before_title' => '<span class="h6">',
+	'after_title' => '</span>',
+) );
 //======================================================================
 // Expanding/Collapse Widgets
 //======================================================================
