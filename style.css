@@ -31,13 +31,27 @@ ul#menu-external-sites li { padding: 0.3em 0 0.3em 0!important; border-bottom:1p
 div#user-nfo, #user-nfo a { line-height:1.0!important; color:#fff; }
 
 div.title-text-container { line-height: 1.15; }
-div.top-row { background-color:rgb(140,200,168); }
+div.top-row { background-color:rgb(35,95,140); }
 div.breadcrumbs-row { background-color:rgb(225,230,235); }
 
 .weekly-notices-btn .fas {
   transition: .3s transform ease-in-out;
 }
 .weekly-notices-btn .collapsed .fas {
+  transform: rotate(-90deg);
+}
+
+.covid-qr-btn .fas {
+  transition: .3s transform ease-in-out;
+}
+.covid-qr-btn .collapsed .fas {
+  transform: rotate(-90deg);
+}
+
+.data-collection-btn .fas {
+  transition: .3s transform ease-in-out;
+}
+.data-collection-btn .collapsed .fas {
   transform: rotate(-90deg);
 }
 
