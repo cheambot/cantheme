@@ -2,6 +2,7 @@
 <div class="row mt-3">
 	<div class="col-12">
 		<?php dynamic_sidebar( 'alert-widget-area' ); ?>
+		<?php dynamic_sidebar( 'info-widget-area' ); ?>
 	</div>
 </div>
 
