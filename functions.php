@@ -151,7 +151,7 @@ add_action( 'wp_enqueue_scripts', 'wpa_dequeue_style', 100 );
 add_action( 'admin_notices', 'ecs_add_post_notice' );
 function ecs_add_post_notice() {
 	global $post;
-	if( isset( $post->post_name ) && ( $post->post_name == 'chs-cctv' ) ) {
+	if( isset( $post->post_name ) && ( $post->post_name == 'internal-cctv' ) ) {
 	  /* Add a notice to the edit page */
 		add_action( 'edit_form_after_title', 'ecs_add_page_notice', 1 );
 		/* Remove the WYSIWYG editor */
@@ -163,7 +163,7 @@ function ecs_add_post_notice() {
 // Add warning to the CCTV page if you try and edit it
 //======================================================================
 function ecs_add_page_notice() {
-	echo '<div style="background-color:#f8d7da;color:#721c24;padding:.5rem 1rem;font-weight:600;border:1px solid #721c24;width:80%;margin-top:10px;margin-left:auto;margin-right:auto;text-align:center;"><p>' . __( 'You are currently editing the CCTV page. Do not edit the title or URL of this page! Do not change the category from "CCTV". The title should be "CCTV" and the URL  "http://intranet/chs-cctv".', 'textdomain' ) . '</p></div>';
+	echo '<div style="background-color:#f8d7da;color:#721c24;padding:.5rem 1rem;font-weight:600;border:1px solid #721c24;width:80%;margin-top:10px;margin-left:auto;margin-right:auto;text-align:center;"><p>' . __( 'You are currently editing the CCTV page. Do not edit the title or URL of this page! Do not change the category from "CCTV". The title should be "CCTV" and the URL  "http://staffintranet/internal-cctv".', 'textdomain' ) . '</p></div>';
 }
 
 //======================================================================
@@ -215,7 +215,7 @@ echo "<script>document.getElementById('rememberme').checked = true;</script>";
 add_filter(  'gettext',  'register_text'  );
 add_filter(  'ngettext',  'register_text'  );
 function register_text( $translated ) {
-     $translated = str_ireplace(  'Username or Email Address',  '<div style="text-align:center;"><h3 id="login-title-1">' . get_bloginfo( 'name' ) . '</h3><span class="small">GDPR compliance requires all staff to be logged in. Your username & password are the same ones used to log on to PCs around the school.</span></div><label for"user_login">Username</label>',  $translated );
+     $translated = str_ireplace(  'Username or Email Address',  '<div style="text-align:center;"><h3 id="login-title-1">' . get_bloginfo( 'name' ) . '</h3><span class="small">GDPR compliance requires all staff to be logged in. Please use your email username & network password to login.</span></div><label for"user_login">Username</label>',  $translated );
 	return $translated;
 }
 
