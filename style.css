@@ -21,7 +21,7 @@ html, body {
 body.error404 {margin-bottom:-200px;}
 
 p { font-size:0.9rem; }
-.nav-bg { background-color:rgb(45, 64, 89); }
+.nav-bg { background-color:rgb(35,95,140); }
 div.profile-pic img.avatar { border-radius: 50%!important; border:1px white solid; }
 
 ul#menu-external-sites { font-size:0.9em!important; list-style-type: none; }
@@ -31,7 +31,7 @@ ul#menu-external-sites li { padding: 0.3em 0 0.3em 0!important; border-bottom:1p
 div#user-nfo, #user-nfo a { line-height:1.0!important; color:#fff; }
 
 div.title-text-container { line-height: 1.15; }
-div.top-row { background-color:rgb(35,95,140); }
+div.top-row { background-color:rgb(45, 64, 89); }
 div.breadcrumbs-row { background-color:rgb(225,230,235); }
 
 .weekly-notices-btn .fas {
