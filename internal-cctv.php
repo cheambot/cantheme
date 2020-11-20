@@ -3,7 +3,7 @@
 Template Name: Internal CCTV
 */
 ?>
-<?php get_header('cctv'); ?>
+<?php get_header('cctv-ext'); ?>
 <!--- FIXED BOTTOM LINKS -->
 <div class="fixed-bottom bg-white text-center border-top p-1 cctv-bottom-nav">Quick Jump: 
 <?php
@@ -26,18 +26,11 @@ foreach ( $it as $fileinfo ) {
 ?>
 </div>
 
-<div class="col-3">
-	<?php get_template_part('login-form'); ?>
-	<?php dynamic_sidebar( 'search-widget-area' ); ?>
-	<?php dynamic_sidebar( 'weekly-notices-widget-area' ); ?>
-	<?php dynamic_sidebar( 'data-collection-widget-area' ); ?>
-	<?php dynamic_sidebar( 'useful-docs-widget-area' ); ?>	
-</div>
-
-<div class="col-8">
-	<div class="row mb-4">
-		<div class="col-12">
-		<span class="h3 display-5"><?php the_title(); ?></span>
+<div class="row">
+	<div class="col-12">
+		<span class="h3">
+				<?php the_title(); ?>
+		</span>
 		<hr class="small mb-4">
 		<p>Please note that these are not the live camera feeds. They are just examples of each cameras viewpoint so you can tell us which camera(s) you want footage from.</p>
 		<h5>To submit your request for <strong>Internal CCTV</strong> footage, please <a href="http://staffintranet/it-support/open-support-ticket">Open A Support Ticket</a></h5>
