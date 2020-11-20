@@ -22,7 +22,7 @@
 	<meta name="theme-color" content="#05324e">
 </head>
 <body <?php body_class(); ?>>
-	<div class="container">
+	<div class="container-xl">
 		<div class="row top-row">
 			<div class="col-12 pt-2">
 			<!--	<img class="float-right" src="<?php // echo get_template_directory_uri(); ?>/images/site-logos/logo-50px-no-txt.png" alt="OPH Logo"> -->
@@ -35,13 +35,13 @@
 		</nav>
 	</div>
 	<?php
-				if(function_exists('bcn_display'))
-					{
-	echo '<div class="row breadcrumbs-row mb-2">';
-		echo '<div class="breadcrumbs px-3 py-2" typeof="BreadcrumbList" vocab="https://schema.org/">';
-			
-						bcn_display();
-					
-		echo '</div>';
-	echo '</div>';
-	}?>
+		if ( !is_front_page() ) :
+			if ( function_exists('bcn_display') ) :
+				echo '<div class="row breadcrumbs-row mb-2">';
+				echo '<div class="breadcrumbs px-3 py-2" typeof="BreadcrumbList" vocab="https://schema.org/">';
+				bcn_display();
+				echo '</div>';
+				echo '</div>';
+				endif;	
+		endif;
+	?>
